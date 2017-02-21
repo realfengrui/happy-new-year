@@ -8,9 +8,10 @@
 }
 html,body {
   height: 100%;
+  overflow: hidden;
 }
 /*bg_music*/
-#music {
+.music {
   position: fixed;;
   top:3vh;
   right: 4vw;
@@ -21,13 +22,13 @@ html,body {
   border-radius: 50%;
   background-color: #fff;
 }
-#music > img:first-of-type {
+.music > img:first-of-type {
   position: absolute;
   top:24%;
   right: 2.5%;
   width:28.421%;
 }
-#music > img:last-of-type {
+.music > img:last-of-type {
   position: absolute;
   top: 0;
   left:0;
@@ -37,7 +38,7 @@ html,body {
   width:79%;
   z-index: -1;
 }
-#music > img.play {
+.music > img.play {
   -webkit-animation:music_disc 4s linear infinite ;
   animation: music_disc 4s linear infinite;
 }
@@ -72,7 +73,7 @@ html,body {
   height: 100%;
 }
 #page1 {
-  display: none;;
+  display: block;
 }
 .page > .bg {
   position: absolute;
@@ -165,7 +166,27 @@ html,body {
 }
 /*page2*/
 #page2 {
-  display: none;;
+  display: none;
+  -webkit-transition:.5s ;
+  transition:.5s ;
+}
+#page2.fadeOut {
+  opacity: .3;
+  -webkit-transform: translate(0,-100%);
+  transform: translate(0,-100%);
+}
+#page2 > .p2_bg_loading {
+  background: #fff;
+  -webkit-animation: p2_bg_loading 1s linear forwards;
+  animation: p2_bg_loading 1s linear forwards;
+}
+@-webkit-keyframes p2_bg_loading {
+  0%{opacity: 1};
+  100%{opacity: 0};
+}
+@keyframes p2_bg_loading {
+  0%{opacity: 1};
+  100%{opacity: 0};
 }
 #page2 >.bg {
   background: url("../images/p2_bg.jpg") no-repeat center center;
@@ -186,7 +207,7 @@ html,body {
   -webkit-animation: p2_circle_middle  1s  linear 3s infinite;
   animation: p2_circle_out 1s linear 3s  infinite;
   }
-  @-webkit-keyframes p2_circle_out {
+@-webkit-keyframes p2_circle_out {
   0% {
     -webkit-transform:rotate(0deg) ;
       transform: rotate(0deg);
@@ -196,7 +217,7 @@ html,body {
       transform: rotate(360deg);
      }
   }
-  @keyframes p2_circle {
+@keyframes p2_circle {
   0% {
     -webkit-transform:rotate(0deg) ;
       transform: rotate(0deg);
@@ -222,7 +243,7 @@ html,body {
   -webkit-animation: p2_circle_middle  1s  linear 2s infinite;
   animation: p2_circle_middle 1s linear 2s  infinite;
   }
-  @-webkit-keyframes p2_circle_middle {
+@-webkit-keyframes p2_circle_middle {
   0% {
     -webkit-transform:rotate(0deg) ;
       transform: rotate(0deg);
@@ -232,7 +253,7 @@ html,body {
       transform: rotate(720deg);
      }
   }
-  @keyframes p2_circle {
+@keyframes p2_circle {
   0% {
     -webkit-transform:rotate(0deg) ;
       transform: rotate(0deg);
@@ -292,7 +313,13 @@ html,body {
 }
 /*page3*/
 #page3 {
-  display: block;
+  display: none;
+  -webkit-transition:.5s ;
+  transition:.5s ;
+}
+#page3.fadeIn {
+  -webkit-transform: translate(0,-100%);
+  transform: translate(0,-100%);
 }
 #page3 >.bg {
   background: url("../images/p3_bg.jpg") no-repeat center center;
@@ -351,7 +378,7 @@ html,body {
   -webkit-animation: p2_circle_middle  1s  linear 2s infinite;
   animation: p3_blessing 2s linear infinite;
   }
-  @-webkit-keyframes p3_blessing {
+@-webkit-keyframes p3_blessing {
   0% {
     -webkit-transform:rotate(0deg) ;
       transform: rotate(0deg);
@@ -361,7 +388,7 @@ html,body {
       transform: rotate(360deg);
      }
   }
-  @keyframes p3_blessing {
+@keyframes p3_blessing {
   0% {
     -webkit-transform:rotate(0deg) ;
       transform: rotate(0deg);
