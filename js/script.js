@@ -11,18 +11,6 @@ window.onload = function() {
   },false);
   /*控制音乐播放停止*/
   /*onclick有延迟0.3s延迟*/
-  /*
-  music.onclick = function(){
-    if(audio.paused) {
-      audio.play();
-      this.setAttribute("class","play");
-      //this.style.animationPlayState = "running";
-    }else {
-      audio.pause();
-      this.setAttribute("class","");
-      //this.style.animationPlayState = "paused";
-    }
-  }; */
   /*手机端开发touch事件提高性能*/
   music.addEventListener("touchstart",function(event){
     if(audio.paused) {
