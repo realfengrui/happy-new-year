@@ -345,7 +345,7 @@ html,body {
   left: 0;
   margin: 0 auto;
   background: url(../images/p3_title.png) no-repeat center center;
-  background-size: 100%;
+  background-size: 80%;
 }
 #page3 >.p3_second{
   width: 22.8125vw;

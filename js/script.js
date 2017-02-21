@@ -5,8 +5,8 @@ window.onload = function() {
   var page2 = document.getElementById("page2");
   var page3 = document.getElementById("page3");
   /*播放结束后,图片也停止转动*/
-  audio.addEventListener("ended",function(e){
-    music.setAttribute("class","");
+  audio.addEventListener("ended",function(event){
+    music.setAttribute("class"," ");
     //music.style.animationPlayState = "paused";兼容有问题,iphone6以上,安卓的不支持.所以这次我就不用了.
   },false);
   /*控制音乐播放停止*/
@@ -18,7 +18,7 @@ window.onload = function() {
       this.setAttribute("class","play");
     }else {
       audio.pause();
-      this.setAttribute("class","");
+      this.setAttribute("class"," ");
     }
   },false);
   /*点击屏幕翻页*/
