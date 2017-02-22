@@ -90,7 +90,7 @@ html,body {
   background: url("../images/p1_lantern.png") no-repeat center bottom;
   background-size: 100%;
   position: absolute;
-  top:0;
+  top:-3.4%;
   right: 0;
   left: 0;
   margin: auto;
@@ -107,7 +107,7 @@ html,body {
 }
 #page1 > .p1_lantern:before {
   position: absolute;
-  top:0;
+  top:-3.4%;
   right:0;
   bottom: 0;
   left: 0;
