@@ -12,7 +12,7 @@ html,body {
 }
 /*bg_music*/
 .music {
-  position: fixed;
+  position: fixed;;
   top:3vh;
   right: 4vw;
   z-index: 5;
@@ -100,15 +100,18 @@ html,body {
   padding-top: 31vh;
   text-align: center;
   -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
 #page1 > .p1_lantern:before {
   position: absolute;
   top:0;
   right:0;
-  bottom: 0;
+  bottom: 3.4%;
   left: 0;
-  z-index: -1;
+  z-index: 1;
   content: "";
   border-radius: 50%;
   margin: auto;
@@ -117,9 +120,9 @@ html,body {
   background: #d60b3b;
   opacity: 0.5;
   -webkit-box-shadow: 0 0 10vw 10vw #d60b3b;
-    box-shadow: 0 0 10vw 10vw #d60b3b;
+  box-shadow: 0 0 10vw 10vw #d60b3b;
   -webkit-animation: p1_lantern .5s infinite alternate;
-    animation: p1_lantern .5s infinite alternate;
+  animation: p1_lantern .5s infinite alternate;
 }
 @-webkit-keyframes p1_lantern {
   0% { opacity: .5;
@@ -132,12 +135,14 @@ html,body {
 }
 @keyframes p1_lantern {
   0% { opacity: .5;
-      -webkit-transform:scale(.8,.8) ;
-        transform: scale(.8,.8); }
+  -webkit-transform:scale(.8,.8) ;
+  -ms-transform: scale(.8,.8);
+  transform: scale(.8,.8); }
   100%{
-        opacity: 1;
+    opacity: 1;
      }
 }
+
 #page1 > .p1_i {
   position: absolute;
   right:0;
@@ -147,7 +152,7 @@ html,body {
   background-size: 100%;
   width: 27.656vw;
   height: 18.63vh;
-  margin: auto;
+  margin: 0 auto;
 }
 #page1 > .p1_words {
   font-size: 2.134rem;
