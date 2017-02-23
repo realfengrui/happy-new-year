@@ -30,9 +30,8 @@ html,body {
 }
 .music > img:last-of-type {
   position: absolute;
-  top: 0;
+  top: -3.4%;
   left:0;
-  bottom:0;
   right: 0;
   margin: auto;
   width:79%;
